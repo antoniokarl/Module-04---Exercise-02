@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module04Navigation.MainPage" Title="Karl Vincent Antonio">
+
+    <StackLayout>
+        <Button Text="Go to Carousel Page" Clicked="CarouselPage"/>
+        <Button Text="Go to Tabbed Page" Clicked="TabbedPage"/>
+
+    </StackLayout>
+
+</ContentPage>

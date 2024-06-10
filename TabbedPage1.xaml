@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module04Navigation.TabbedPage1" Title="Karl Vincent Antonio">
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Tab 1">
+        <ListView x:Name="myListView"
+          SelectedItem="{Binding SelectedItem}"
+          ItemsSource="{Binding Items}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+    
+    <ContentPage Title="Tab 2">
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="User Information">
+                        <EntryCell Label="First Name" Placeholder="Enter your first name" x:Name="fname"/>
+                        <EntryCell Label="Last Name" Placeholder="Enter your last name" x:Name="lname" />
+                        <EntryCell Label="Email" Placeholder="Enter your email address" x:Name="myEmail" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button Text="Submit" Clicked="OnSubmitEntry"/>
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage Title="Tab 3">
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="My Name is Karl Vincent Antonio"
+                     BackgroundColor="Blue"/>
+                <Label Grid.Column="1" Text="I am 22 years old"
+                     BackgroundColor="Red"/>
+                <Label Grid.Row="1" Text="This is Module 04 - Exercise 02"
+                     BackgroundColor="Green"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="This is Tab 3 of TabbedPage1"
+                     BackgroundColor="Yellow"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
